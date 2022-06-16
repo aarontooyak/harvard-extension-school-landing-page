@@ -1,0 +1,306 @@
+/* -----------------------------
+   colors used
+   -----------------------------
+    #000000
+    #020203
+    #4d84c4
+    #a51c30
+    #f5f5f8
+    #ebebeb
+    #ffffff
+*/
+
+/* -----------------------------
+   fonts used
+   -----------------------------
+Note that Roboto and "Roboto Condensed" are available from the linked fonts already in the HTML
+
+font-family stack for most things:
+    Roboto, Arial, sans-serif;
+
+font-family stack for 'condensed' elements, such as hX headings, header navigation, and links in the 'Explore'  section:
+    'Roboto Condensed', Arial, sans-serif;
+   -----------------------------  */
+
+/* -----------------------------
+   background images used
+   -----------------------------
+../images/hes_shield_wordmark.svg   - This is the HES Shield and HES Wordmark
+../images/campus_bridge_river.jpg   - This is the background image for the 
+                                      "Explore" section
+../images/images/arrow-right.svg    - This is the crimson arrow next to the 
+                                      hypertext links in the "Explore" sections
+../images/mortar-board.svg          - The "cap" in Student Success stories 'program'
+../images/map-marker.svg            - The map marker in Student Success 
+                                      stories 'hometown'
+
+   -----------------------------  */
+
+body {
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 90%;
+}
+
+/* turn off sections you aren't working on so you can focus!
+   I suggest you begin with working on the "footer"
+*/
+/* consider uncommenting this to start so that only the footer is visible! */
+
+/*
+div.explore,
+div.studentsuccess
+{
+    display: none;
+}
+*/
+
+/* -----------------------------
+   Styles for footer
+   ----------------------------- */
+
+
+footer {
+    background-color: #020203;
+    /* black */
+    color: #eee;
+    font-size: 90%;
+}
+
+footer a:active,
+footer a:hover,
+footer a:link,
+footer a:visited {
+    color: white;
+    text-decoration: none;
+    /* remove underlines from links */
+}
+
+footer nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer nav ul li {
+    display: inline;
+    /* important to get items horizontal */
+}
+
+footer nav.contactplus {
+    font-weight: bold;
+}
+
+footer nav.contactplus ul li {
+    padding-left: 1em;
+}
+
+footer nav.contactplus ul li:first-child {
+    padding-left: 0em;
+}
+
+footer nav.privacyplus ul li a::before {
+    content: " | ";
+    padding-left: .2em;
+    padding-right: .2em;
+}
+
+footer nav.privacyplus ul li:first-child a::before {
+    content: " ";
+    padding-left: 0em;
+}
+
+
+/* ----------------------------- */
+
+/* -----------------------------
+   Styles for header
+   ----------------------------- */
+
+/* ----------------------------- */
+
+header {
+    font-family: 'Roboto Condensed', Arial, sans-serif;
+    margin-bottom: 10em;
+    /* breathing room from white */
+}
+
+header h2 {
+    background-color: DarkRed;
+    color: #fff;
+    font-kerning: small-caps;
+    margin: .2em;
+}
+
+header h2.wordmark {
+    background-color: #fff;
+    background-image: url('../images/hes_shield_wordmark.svg');
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 110px;
+    text-indent: -3000px;
+    float: left;
+}
+
+/* -----------------------------
+   Styles for both header navs
+   ----------------------------- */
+
+/* ----------------------------- */
+
+header nav {
+    float: right;
+    overflow: auto;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+/* -----------------------------
+   Styles for header primary nav
+   ----------------------------- */
+
+/* ----------------------------- */
+
+header nav.primary a:active,
+header nav.primary a:hover,
+header nav.primary a:link,
+header nav.primary a:visited {
+    color: black;
+    text-decoration: none;
+    /* remove underlines from links */
+}
+
+header nav.primary li.getinfo {
+    border: 3px solid #a51c30;
+    padding: .25em .5em;
+    background-color: darkred;
+}
+
+/* -----------------------------
+   Styles for header secondary nav
+   ----------------------------- */
+
+/* ----------------------------- */
+
+header nav.secondary a:active,
+header nav.secondary a:hover,
+header nav.secondary a:link,
+header nav.secondary a:visited {
+    color: #4d84c4;
+    text-decoration: none;
+    /* remove underlines from links */
+}
+
+header nav.secondary li.login {
+    border: 3px solid #4d84c4;
+    padding: .25em .5em;
+}
+
+/* -----------------------------
+   Styles for "Explore"
+   ----------------------------- */
+
+div.explore {
+    background-image: url('../images/campus_bridge_river.jpg');
+    background-repeat: none;
+    background-size: cover;
+    padding: 2em;
+}
+
+div.explore h1 {
+    color: white;
+    text-align: center;
+}
+
+div.explore div.sections {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+div.explore div.sections section {
+    background-color: lightgrey;
+    flex-basis: 30%;
+    border-top: 5px solid darkred;
+    margin-bottom: 1em;
+}
+
+div.explore div.sections section h2 {
+    text-transform: uppercase;
+    background-color: white;
+    margin-top: 0;
+    padding: .5em;
+}
+
+div.explore div.sections section ul li {
+    list-style-type: none;
+    margin-left: -2em;
+    /* removes the unordered list */
+}
+
+div.explore div.sections section ul li a {
+    color: darkred;
+    text-decoration: none;
+    background-image: url(../images/arrow-right.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    padding-right: 2em;
+}
+
+
+div.explore div.sections section ul li a:hover {
+    text-decoration: underline;
+}
+
+/* ----------------------------- */
+
+/* -----------------------------
+   Styles for "Student Success"
+   ----------------------------- */
+
+/* ----------------------------- */
+
+div.studentsuccess {
+    background-color: #f5f5f5;
+    /* light light grey */
+
+}
+
+
+div.studentsuccess h2 {
+    padding-top: 1em;
+    margin-top: 0;
+    text-align: center;
+}
+
+div.studentsuccess p {
+    width: 70%;
+    margin: auto;
+    padding-bottom: 1em;
+}
+
+
+div.studentsuccess div.articles {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+}
+
+div.studentsuccess div.articles article {
+    flex-basis: 30%;
+}
+
+
+div.studentsuccess div.articles img {
+    width: 100%;
+    object-fit: cover;
+}
+
+div.studentsuccess div.articles ul li.program {
+    list-style-image: url(../images/mortar-board.svg);
+}
+
+div.studentsuccess div.articles ul li.hometown {
+    list-style-image: url(../images/map-marker.svg);
+}
